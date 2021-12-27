@@ -1,0 +1,48 @@
+
+.sideBarFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    border: 1px solid #d0d0d0;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+    transition: .3s;
+    height: 30px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 3px 5px 15px #c0f1ff;
+    }
+  }
+
+  select {
+    width: 80%;
+    height: 30px;
+    border: 1px solid #d0d0d0;
+    padding: 0 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.createNodeButton {
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #c0f1ff;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+}

@@ -1,0 +1,36 @@
+.sideBar {
+  position: fixed;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  padding-top: 30px;
+  width: 300px;
+  border-right: 1px solid rgba(60, 145, 230, 0.76);
+  box-shadow: 2px 0 15px #bababa;
+}
+
+.title {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+
+  a:visited, a:active {
+    color: black;
+  }
+}
+
+.nodesWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-left: 10px;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:visited, &:focus {
+      color: black;
+    }
+  }
+}

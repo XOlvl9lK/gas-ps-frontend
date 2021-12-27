@@ -1,0 +1,57 @@
+@mixin button {
+  cursor: pointer;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-weight: bold;
+
+  &:disabled {
+    color: white;
+    background-color: #e0e0e0;
+    border: 1.5px solid #e0e0e0;
+  }
+}
+
+@mixin outlined($color) {
+  border: 1.5px solid $color;
+  color: $color;
+  background: none;
+}
+
+$primary: #c0f1ff;
+$danger: #F58F29;
+$accept: #3BB273;
+
+.primaryButton {
+  @include button;
+  border: none;
+  cursor: pointer;
+  background-color: $primary;
+}
+
+.primaryOutlinedButton {
+  @include button;
+  @include outlined($primary);
+}
+
+.dangerButton {
+  @include button;
+  border: none;
+  background-color: $danger;
+}
+
+.dangerOutlinedButton {
+  @include button;
+  @include outlined($danger);
+}
+
+.acceptButton {
+  @include button;
+  border: none;
+  background-color: $accept;
+}
+
+.acceptOutlinedButton {
+  @include button;
+  @include outlined($accept);
+}

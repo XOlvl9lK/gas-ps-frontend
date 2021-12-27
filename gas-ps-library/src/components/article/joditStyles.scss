@@ -1,0 +1,20 @@
+
+.textEditorReadonly {
+  .jodit-status-bar {
+    display: none !important;
+  }
+
+  .jodit-toolbar__box:not(:empty) {
+    border: none;
+  }
+
+  .jodit-container:not(.jodit_inline) {
+    border: none;
+  }
+}
+
+.textEditor {
+  .jodit-status-bar {
+    display: none !important;
+  }
+}

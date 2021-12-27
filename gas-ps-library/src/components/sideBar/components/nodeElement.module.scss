@@ -1,0 +1,97 @@
+@mixin nodeMixin {
+  cursor: pointer;
+  padding: 7px;
+  transition: .2s;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    background-color: #dedede;
+
+    .icons {
+      opacity: 1;
+    }
+  }
+}
+
+.node {
+  @include nodeMixin;
+}
+
+.nodeActive {
+  @include nodeMixin;
+  background-color: #dedede;
+}
+
+.nodeTitle {
+  input {
+    height: 100%;
+    border: none;
+    padding-left: 2px;
+    border-bottom: 1px solid black;
+    transition: .2s;
+    cursor: pointer;
+    width: 185px;
+
+    &:disabled {
+      background: none;
+      color: black;
+      border-bottom: 1px solid transparent;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.icons {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: .2s;
+  opacity: 0;
+}
+
+.iconArticle {
+  color: rgba(60, 145, 230, 0.76);
+  width: 25px !important;
+}
+
+.iconBook {
+  color: black;
+  width: 25px !important;
+}
+
+@mixin iconTool($color) {
+  transition: .2s;
+  margin-right: 7px;
+  &:hover {
+    transform: scale(1.1);
+    color: $color
+  }
+}
+
+.iconCross {
+  @include iconTool(red)
+}
+
+.iconCog {
+  @include iconTool(#3BB273);
+  width: 0.85em !important;
+}
+
+.iconCheck {
+  @include iconTool(#3BB273);
+  width: 0.9em !important;
+}
+
+.iconArrow {
+  @include iconTool(#F58F29);
+}
