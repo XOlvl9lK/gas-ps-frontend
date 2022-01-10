@@ -10,7 +10,7 @@ const getNode = (tree: Tree[]): JSX.Element[] => {
   return tree.map(({ node, childes, layer}) => {
     return (
       <>
-        <NodeElement key={node.id + node.type} node={node} layer={layer} />
+        <NodeElement key={node.id + node.type + Math.random()} node={node} layer={layer} />
         {childes?.length && getNode(childes)}
       </>
     )

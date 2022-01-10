@@ -3,14 +3,14 @@ import styles from './button.module.scss'
 
 type ButtonThemes = 'primary' | 'danger' | 'accept' | 'primaryOutlined' | 'dangerOutlined' | 'acceptOutlined'
 
-interface ButtonProps {
+export interface ButtonProps {
   theme: ButtonThemes,
   onClick?: (...args: any[]) => void,
   label: string,
   disabled?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({
+const button: FC<ButtonProps> = ({
   theme,
   label,
   onClick,
@@ -23,4 +23,4 @@ const Button: FC<ButtonProps> = ({
   )
 }
 
-export default Button
+export default button

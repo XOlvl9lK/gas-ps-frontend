@@ -7,7 +7,7 @@ import { useToggle } from '../../../../common/hooks/useToggle'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router'
 
-export const useNodeElementState = ({ id, type, title: nodeTitle }: Node) => {
+export const useNodeElementState = ({ id, type, title: nodeTitle, parentId, chapterId }: Node) => {
   const dispatch = useAppDispatch();
   const [title, onChangeTitle] = useOnChange(nodeTitle);
   const [readOnly, onEditNode] = useToggle(true);
@@ -23,7 +23,7 @@ export const useNodeElementState = ({ id, type, title: nodeTitle }: Node) => {
   }, [readOnly, savedTitle])
 
   const onSaveNode = useCallback((event: SyntheticEvent) => {
-    dispatch(updateNodeAction({ id, type, title }))
+    dispatch(updateNodeAction({ id, type, title, parentId, chapterId }))
     !readOnly && onEditNode(event)
   }, [readOnly, title])
 

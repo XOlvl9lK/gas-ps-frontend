@@ -15,7 +15,7 @@ import { Article } from '../../article/store/slice'
 export const fetchNodesAction = createAction('nodes/fetch')
 export const createNodeAction = createAction<Omit<Node, 'id'>>(
   'nodes/create')
-export const deleteNodeAction = createAction<{ id: number, type: NodeType }>('nodes/create')
+export const deleteNodeAction = createAction<{ id: number, type: NodeType }>('nodes/delete')
 export const updateNodeAction = createAction<Node>('nodes/update')
 
 export function* fetchNodesWorker() {

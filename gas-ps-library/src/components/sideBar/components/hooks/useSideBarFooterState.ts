@@ -12,7 +12,7 @@ export const useSideBarFooterState = () => {
   const [title, onTitleChange] = useOnChange('')
   const chapterOptions = useAppSelector(chapterOptionsSelector)
 
-  const onCreateNode = useCallback(() => {
+  const onCreateNode = useCallback(async () => {
     if (title) {
       dispatch(createNodeAction({ title, type, ...(chapter ? { chapterId: Number(chapter), parentId: Number(chapter) } : {})}))
       onTitleChange({ target: { value: '' }})

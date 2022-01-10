@@ -28,7 +28,7 @@ const NodeElement: FC<NodeElementProps> = React.memo(({ node, layer}) => {
   return (
     <>
       {node.type === 'article' ?
-        <NavLink className={setActiveLink} style={{ paddingLeft: `${layer * 12}px` }} to={`article/${node.id}`}>
+        <NavLink draggable={false} className={setActiveLink} style={{ paddingLeft: `${layer * 12}px` }} to={`article/${node.id}`}>
           <div className={styles.nodeTitle}>
             <FontAwesomeIcon icon={faNewspaper} className={styles.iconArticle}/>
             <input type='text' value={title} onChange={onChangeTitle} disabled={readOnly}/>

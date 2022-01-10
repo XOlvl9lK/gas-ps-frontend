@@ -29,6 +29,11 @@ export const chapterOptionsSelector = (state: RootState) => {
   return chapters.map(c => ({ id: c.id, title: c.title }))
 }
 
+export const articleOptionsSelector = (state: RootState) => {
+  const articles = state.sideBarReducer.nodes.filter(n => n.type === 'article')
+  return articles.map(a => ({ label: a.title, value: a.id }))
+}
+
 const sideBarSlice = createSlice({
   name: 'sideBarSlice',
   initialState,

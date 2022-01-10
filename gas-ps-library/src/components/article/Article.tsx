@@ -4,8 +4,7 @@ import styles from './article.module.scss'
 import JoditEditor from 'jodit-react'
 import Loader from '../../common/components/loader/Loader'
 import './joditStyles.scss'
-import Button from '../../common/components/button/Button'
-import { useNavigate } from 'react-router'
+import { Button } from 'common'
 
 const Article = () => {
   const {

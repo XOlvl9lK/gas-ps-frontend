@@ -6,6 +6,7 @@ import SideBar from './sideBar/SideBar'
 import Wrapper from './wrapper/Wrapper'
 import HomePage from './homePage/homePage'
 import Article from './article/Article'
+import Header from './header/Header'
 
 const AppProvider: FC = ({ children }) => {
   return (
@@ -23,6 +24,7 @@ const Layout: FC = ({ children }) => {
 
   return (
     <>
+      <Header />
       <SideBar />
       <Wrapper>
         <Outlet />
